@@ -37,7 +37,7 @@ namespace EmployeeApplication
             dgvEmployeeList.DataSource = dataTable;
         }
 
-        //Formatting DataGridView  fds
+        //Formatting DataGridView
         private void dataGridViewFormat()
         {
             dgvEmployeeList.DefaultCellStyle.Font = new Font("Yu Gothic UI", 10);
