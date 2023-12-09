@@ -2,15 +2,32 @@
 
 namespace EmployeeNamespace
 {
-    public struct Employee
+    public class Employee
     {
-        private int id;
-        private string firstName, lastName, position;
+        private int Id;
+        private string firstName, lastName, position, department, email;
 
-        public int ID
+        public Employee(int id, string firstN, string lastN, string pos, string dept)
         {
-            get { return id; }
-            set { id = value; }
+            Id = id;
+            firstName = firstN;
+            lastName = lastN;
+            position = pos;
+            department = dept;
+        }
+        public Employee(int id, string firstN, string lastN, string pos, string dept, string eml)
+        {
+            Id = id;
+            firstName = firstN;
+            lastName = lastN;
+            position = pos;
+            department = dept;
+            email = eml;
+        }
+         public int ID
+        {
+            get { return (int)Id; }
+            set { Id = value; }
         }
         public string FirstName
         {
@@ -27,6 +44,15 @@ namespace EmployeeNamespace
             get { return position; }
             set { position = value; }
         }
+        public string Department
+        {
+            get { return department; }
+            set { department = value; }
+        }
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
     }
-
 }
