@@ -323,7 +323,10 @@ namespace EmployeeApplication
             Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmEmployeeDatabase";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee Database";
+            WindowState = FormWindowState.Maximized;
+            FormClosing += frmEmployeeDatabase_FormClosing;
             Load += frmEmployeeDatabase_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEmployeeList).EndInit();
             panel1.ResumeLayout(false);

@@ -114,6 +114,11 @@ namespace EmployeeApplication
             cbxDepartment.Text = null;
             txtbEmail.Text = null;
         }
+
+        private void frmEmployeeDatabase_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

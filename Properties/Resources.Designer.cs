@@ -63,9 +63,9 @@ namespace EmployeeApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hades_123 {
+        internal static System.Drawing.Bitmap database {
             get {
-                object obj = ResourceManager.GetObject("Hades_123", resourceCulture);
+                object obj = ResourceManager.GetObject("database", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
