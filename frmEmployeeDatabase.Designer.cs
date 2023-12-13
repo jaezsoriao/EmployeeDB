@@ -49,6 +49,7 @@ namespace EmployeeApplication
             btnClear = new Button();
             lblDepartment = new Label();
             panel1 = new Panel();
+            btnEdit = new Button();
             txtbEmail = new TextBox();
             lblEmail = new Label();
             cbxDepartment = new ComboBox();
@@ -84,11 +85,11 @@ namespace EmployeeApplication
             // 
             btnSubmit.BackColor = Color.FromArgb(116, 155, 194);
             btnSubmit.FlatStyle = FlatStyle.Flat;
-            btnSubmit.Font = new Font("Yu Gothic UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSubmit.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnSubmit.ForeColor = SystemColors.ActiveCaptionText;
-            btnSubmit.Location = new Point(34, 460);
+            btnSubmit.Location = new Point(37, 460);
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(97, 35);
+            btnSubmit.Size = new Size(60, 25);
             btnSubmit.TabIndex = 2;
             btnSubmit.Text = "Submit";
             btnSubmit.UseVisualStyleBackColor = false;
@@ -135,6 +136,7 @@ namespace EmployeeApplication
             dgvEmployeeList.RowTemplate.Height = 25;
             dgvEmployeeList.Size = new Size(829, 525);
             dgvEmployeeList.TabIndex = 4;
+            dgvEmployeeList.RowHeaderMouseClick += dgvEmployeeList_RowHeaderMouseClick;
             // 
             // lblEmployeeList
             // 
@@ -224,10 +226,10 @@ namespace EmployeeApplication
             // 
             btnClear.BackColor = Color.FromArgb(116, 155, 194);
             btnClear.FlatStyle = FlatStyle.Flat;
-            btnClear.Font = new Font("Yu Gothic UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnClear.Location = new Point(146, 460);
+            btnClear.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClear.Location = new Point(110, 460);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(97, 35);
+            btnClear.Size = new Size(60, 25);
             btnClear.TabIndex = 13;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
@@ -248,6 +250,7 @@ namespace EmployeeApplication
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.BackColor = Color.FromArgb(191, 220, 255);
+            panel1.Controls.Add(btnEdit);
             panel1.Controls.Add(txtbEmail);
             panel1.Controls.Add(lblEmail);
             panel1.Controls.Add(cbxDepartment);
@@ -268,6 +271,21 @@ namespace EmployeeApplication
             panel1.Name = "panel1";
             panel1.Size = new Size(281, 635);
             panel1.TabIndex = 16;
+            // 
+            // btnEdit
+            // 
+            btnEdit.BackColor = Color.FromArgb(116, 155, 194);
+            btnEdit.Enabled = false;
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEdit.ForeColor = SystemColors.ActiveCaptionText;
+            btnEdit.Location = new Point(183, 460);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(60, 25);
+            btnEdit.TabIndex = 21;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // txtbEmail
             // 
@@ -357,5 +375,6 @@ namespace EmployeeApplication
         private ComboBox cbxDepartment;
         private Label lblEmail;
         private TextBox txtbEmail;
+        private Button btnEdit;
     }
 }

@@ -7,7 +7,7 @@ namespace EmployeeNamespace
         private int Id;
         private string firstName, lastName, position, department, email;
 
-        public Employee(int id, string firstN, string lastN, string pos, string dept)
+        public Employee(int id, string lastN, string firstN, string dept, string pos)
         {
             Id = id;
             firstName = firstN;
@@ -15,7 +15,7 @@ namespace EmployeeNamespace
             position = pos;
             department = dept;
         }
-        public Employee(int id, string firstN, string lastN, string pos, string dept, string eml)
+        public Employee(int id, string lastN, string firstN, string dept, string pos, string eml)
         {
             Id = id;
             firstName = firstN;
@@ -29,25 +29,25 @@ namespace EmployeeNamespace
             get { return (int)Id; }
             set { Id = value; }
         }
-        public string FirstName
-        {
-            get { return firstName; }
-            set { firstName = value; }
-        }
         public string LastName
         {
             get { return lastName; }
             set { lastName = value; }
         }
-        public string Position
+        public string FirstName
         {
-            get { return position; }
-            set { position = value; }
+            get { return firstName; }
+            set { firstName = value; }
         }
         public string Department
         {
             get { return department; }
             set { department = value; }
+        }
+        public string Position
+        {
+            get { return position; }
+            set { position = value; }
         }
         public string Email
         {
