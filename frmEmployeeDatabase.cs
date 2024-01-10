@@ -93,6 +93,7 @@ namespace EmployeeApplication
 
                 lblErrorMessage.Text = "";
                 btnEditCheck();
+                btnDeleteCheck();
 
             }
             catch (System.FormatException)
@@ -168,13 +169,25 @@ namespace EmployeeApplication
             catch (System.ArgumentNullException)
             {
                 SystemSounds.Beep.Play();
-                lblErrorMessage.Text = "Please enter ID number in the correct format";
+                lblErrorMessage.Text = "Please fill up the required fields";
             }
             catch (System.FormatException)
             {
                 SystemSounds.Beep.Play();
                 lblErrorMessage.Text = "Please enter ID number in the correct format";
-            }           
+            }
+        }
+
+        //Delete selected row
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvEmployeeList.SelectedRows)
+            {
+                dgvEmployeeList.Rows.RemoveAt(row.Index);
+            }
+
+            btnDeleteCheck();
+            btnEditCheck();
         }
 
 
@@ -210,6 +223,24 @@ namespace EmployeeApplication
             else
             {
                 btnEdit.Enabled = true;
+            }
+        }
+
+
+        //Toggles delete button on/off
+        private void btnDeleteCheck()
+        {
+            if (dgvEmployeeList.Rows.Count <= 1)
+            {
+                btnDelete.Enabled = false;
+            }
+            else if (dgvEmployeeList.CurrentRow.Index == dgvEmployeeList.RowCount - 1)
+            {
+                btnDelete.Enabled = false;
+            }
+            else
+            {
+                btnDelete.Enabled = true;
             }
         }
 

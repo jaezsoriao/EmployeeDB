@@ -49,6 +49,7 @@ namespace EmployeeApplication
             btnClear = new Button();
             lblDepartment = new Label();
             panel1 = new Panel();
+            btnDelete = new Button();
             btnEdit = new Button();
             txtbEmail = new TextBox();
             lblEmail = new Label();
@@ -85,11 +86,11 @@ namespace EmployeeApplication
             // 
             btnSubmit.BackColor = Color.FromArgb(116, 155, 194);
             btnSubmit.FlatStyle = FlatStyle.Flat;
-            btnSubmit.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSubmit.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnSubmit.ForeColor = SystemColors.ActiveCaptionText;
-            btnSubmit.Location = new Point(37, 460);
+            btnSubmit.Location = new Point(35, 460);
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(60, 25);
+            btnSubmit.Size = new Size(95, 30);
             btnSubmit.TabIndex = 2;
             btnSubmit.Text = "Submit";
             btnSubmit.UseVisualStyleBackColor = false;
@@ -226,10 +227,10 @@ namespace EmployeeApplication
             // 
             btnClear.BackColor = Color.FromArgb(116, 155, 194);
             btnClear.FlatStyle = FlatStyle.Flat;
-            btnClear.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnClear.Location = new Point(110, 460);
+            btnClear.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClear.Location = new Point(148, 460);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(60, 25);
+            btnClear.Size = new Size(95, 30);
             btnClear.TabIndex = 13;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
@@ -250,6 +251,7 @@ namespace EmployeeApplication
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.BackColor = Color.FromArgb(191, 220, 255);
+            panel1.Controls.Add(btnDelete);
             panel1.Controls.Add(btnEdit);
             panel1.Controls.Add(txtbEmail);
             panel1.Controls.Add(lblEmail);
@@ -272,16 +274,30 @@ namespace EmployeeApplication
             panel1.Size = new Size(281, 635);
             panel1.TabIndex = 16;
             // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.FromArgb(116, 155, 194);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDelete.ForeColor = SystemColors.ActiveCaptionText;
+            btnDelete.Location = new Point(148, 506);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(95, 30);
+            btnDelete.TabIndex = 22;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // btnEdit
             // 
             btnEdit.BackColor = Color.FromArgb(116, 155, 194);
             btnEdit.Enabled = false;
             btnEdit.FlatStyle = FlatStyle.Flat;
-            btnEdit.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEdit.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnEdit.ForeColor = SystemColors.ActiveCaptionText;
-            btnEdit.Location = new Point(183, 460);
+            btnEdit.Location = new Point(35, 506);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(60, 25);
+            btnEdit.Size = new Size(95, 30);
             btnEdit.TabIndex = 21;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = false;
@@ -343,7 +359,6 @@ namespace EmployeeApplication
             Name = "frmEmployeeDatabase";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee Database";
-            WindowState = FormWindowState.Maximized;
             FormClosing += frmEmployeeDatabase_FormClosing;
             Load += frmEmployeeDatabase_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEmployeeList).EndInit();
@@ -376,5 +391,6 @@ namespace EmployeeApplication
         private Label lblEmail;
         private TextBox txtbEmail;
         private Button btnEdit;
+        private Button btnDelete;
     }
 }

@@ -35,6 +35,7 @@
             panel2 = new Panel();
             label1 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -42,7 +43,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.database;
-            pictureBox1.Location = new Point(198, 95);
+            pictureBox1.Location = new Point(199, 72);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(112, 133);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -71,7 +72,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Yu Gothic UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.MidnightBlue;
+            label1.ForeColor = Color.FromArgb(67, 111, 154);
             label1.Location = new Point(219, 258);
             label1.Name = "label1";
             label1.Size = new Size(75, 20);
@@ -85,12 +86,26 @@
             timer1.Interval = 15;
             timer1.Tick += timer1_Tick;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Bahnschrift SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.MidnightBlue;
+            label2.Location = new Point(135, 199);
+            label2.Name = "label2";
+            label2.Size = new Size(251, 33);
+            label2.TabIndex = 2;
+            label2.Text = "Employee Database";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frmLoadingScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(191, 220, 255);
             ClientSize = new Size(510, 332);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
@@ -112,5 +127,6 @@
         private Panel panel2;
         private Label label1;
         private System.Windows.Forms.Timer timer1;
+        private Label label2;
     }
 }
