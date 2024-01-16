@@ -90,13 +90,13 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Bahnschrift SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Gadugi", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.MidnightBlue;
-            label2.Location = new Point(135, 199);
+            label2.Location = new Point(177, 196);
             label2.Name = "label2";
-            label2.Size = new Size(251, 33);
+            label2.Size = new Size(163, 38);
             label2.TabIndex = 2;
-            label2.Text = "Employee Database";
+            label2.Text = "DataBasic";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // frmLoadingScreen

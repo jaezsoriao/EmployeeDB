@@ -23,10 +23,12 @@ namespace EmployeeApplication
             if (panel2.Width >= panel1.Width)
             {
                 timer1.Stop();
+
                 var mainForm = new frmEmployeeDatabase();
                 mainForm.Show();
                 this.Close();
             }
+
         }
     }
 }

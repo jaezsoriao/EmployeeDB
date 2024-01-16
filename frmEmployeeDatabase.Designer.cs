@@ -105,6 +105,7 @@ namespace EmployeeApplication
             txtbEmployeeID.Name = "txtbEmployeeID";
             txtbEmployeeID.Size = new Size(229, 25);
             txtbEmployeeID.TabIndex = 3;
+            txtbEmployeeID.TextChanged += txtbEmployeeID_TextChanged;
             // 
             // dgvEmployeeList
             // 
@@ -170,6 +171,7 @@ namespace EmployeeApplication
             txtbLastName.Name = "txtbLastName";
             txtbLastName.Size = new Size(229, 25);
             txtbLastName.TabIndex = 7;
+            txtbLastName.TextChanged += txtbLastName_TextChanged;
             // 
             // lblFirstName
             // 
@@ -191,6 +193,7 @@ namespace EmployeeApplication
             txtbFirstName.Name = "txtbFirstName";
             txtbFirstName.Size = new Size(231, 25);
             txtbFirstName.TabIndex = 9;
+            txtbFirstName.TextChanged += txtbFirstName_TextChanged;
             // 
             // lblPosition
             // 
@@ -211,6 +214,7 @@ namespace EmployeeApplication
             txtbPosition.Name = "txtbPosition";
             txtbPosition.Size = new Size(231, 25);
             txtbPosition.TabIndex = 11;
+            txtbPosition.TextChanged += txtbPosition_TextChanged;
             // 
             // lblErrorMessage
             // 
@@ -311,6 +315,7 @@ namespace EmployeeApplication
             txtbEmail.Name = "txtbEmail";
             txtbEmail.Size = new Size(231, 25);
             txtbEmail.TabIndex = 20;
+            txtbEmail.TextChanged += txtbEmail_TextChanged;
             // 
             // lblEmail
             // 
@@ -334,6 +339,7 @@ namespace EmployeeApplication
             cbxDepartment.Name = "cbxDepartment";
             cbxDepartment.Size = new Size(231, 25);
             cbxDepartment.TabIndex = 16;
+            cbxDepartment.TextChanged += cbxDepartment_TextChanged;
             // 
             // panel2
             // 
@@ -358,7 +364,7 @@ namespace EmployeeApplication
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmEmployeeDatabase";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Employee Database";
+            Text = "DataBasic";
             FormClosing += frmEmployeeDatabase_FormClosing;
             Load += frmEmployeeDatabase_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEmployeeList).EndInit();
